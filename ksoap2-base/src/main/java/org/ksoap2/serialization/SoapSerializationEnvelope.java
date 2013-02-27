@@ -42,7 +42,7 @@ public class SoapSerializationEnvelope extends SoapEnvelope
     protected static final int QNAME_MARSHAL = 3;
     private static final String ANY_TYPE_LABEL = "anyType";
     private static final String ARRAY_MAPPING_NAME = "Array";
-    private static final String NULL_LABEL = "null";
+    private static final String NULL_LABEL = "nil";
     private static final String NIL_LABEL = "nil";
     private static final String HREF_LABEL = "href";
     private static final String ID_LABEL = "id";

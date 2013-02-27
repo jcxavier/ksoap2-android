@@ -235,13 +235,13 @@ public class SoapSerializationEnvelopeTest extends TestCase {
         myTransport.parseResponse(envelope, ServiceConnectionFixture.hashTableWithDupAsStream());
         Hashtable result = (Hashtable) envelope.bodyIn;
         assertEquals("value1", result.get("key1"));
-        assertEquals(1, result.values().size());
+        assertEquals(3, result.values().size());
     }
 
     public void testWritingBody_WithNullParameter() throws Exception {
         soapObject.addProperty(PARAMETER_NAME, null);
         writeBodyWithSoapObject(soapObject);
-        assertEquals(BODY_XML_STRING + ">" + "<" + PARAMETER_NAME + " n2:null=\"true\" xmlns:n2=\""
+        assertEquals(BODY_XML_STRING + ">" + "<" + PARAMETER_NAME + " n2:nil=\"true\" xmlns:n2=\""
                 + envelope.xsi + "\" />" + END_XML_FUNCTION_STRING, new String(outputStream.toByteArray()));
     }
 
